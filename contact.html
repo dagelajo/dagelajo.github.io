@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Contact 18th Street Bike Shop for repair questions and used bike inquiries."
+    />
+    <title>Contact | 18th Street Bike Shop</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="index.html">
+          <img src="18thStLogo.png" alt="18th Street Bike Shop logo" />
+          <span>18th Street Bike Shop</span>
+        </a>
+        <button class="menu-toggle" aria-label="Toggle navigation">Menu</button>
+        <nav class="site-nav" data-nav>
+          <a href="index.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="request-repair.html">Request Repair</a>
+          <a href="used-bikes.html">Used Bikes</a>
+          <a href="contact.html" class="active">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="inner-hero">
+        <div class="container">
+          <p class="eyebrow">Reach Out</p>
+          <h1>Questions, quotes, and bike sales support</h1>
+          <p>
+            Ask about repairs, service area, used-bike availability, or trade-in
+            options.
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container split">
+          <article class="form-panel">
+            <h2>Send a message</h2>
+            <form id="contact-form">
+              <div class="two-col">
+                <label>
+                  Name
+                  <input type="text" name="name" required />
+                </label>
+                <label>
+                  Email
+                  <input type="email" name="email" required />
+                </label>
+              </div>
+              <label>
+                Message
+                <textarea
+                  name="message"
+                  placeholder="Tell us what you need help with."
+                  required
+                ></textarea>
+              </label>
+              <button class="btn btn-primary" type="submit">Send Message</button>
+            </form>
+            <div id="contact-status" class="status-banner" role="status" aria-live="polite"></div>
+          </article>
+
+          <aside class="service-box">
+            <h3>Shop details</h3>
+            <p>
+              Email: hello@18thstreetbikeshop.com<br />
+              Phone: (000) 000-0000
+            </p>
+            <p>
+              Service Hours<br />
+              Mon - Fri: 8:00 AM - 6:00 PM<br />
+              Sat: 9:00 AM - 4:00 PM
+            </p>
+            <p class="small-text">
+              Replace placeholder contact info with your real business details.
+            </p>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <p>18th Street Bike Shop</p>
+        <p>Mobile Repairs | Used Bikes | Rider Support</p>
+      </div>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>

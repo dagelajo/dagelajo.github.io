@@ -1,0 +1,397 @@
+:root {
+  --bg: #f5f1e8;
+  --paper: #fffdf7;
+  --ink: #1b1f24;
+  --muted: #5f6872;
+  --brand: #d44f1a;
+  --brand-deep: #8f2c08;
+  --line: #d9ccb9;
+  --shadow: 0 12px 28px rgba(37, 27, 17, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 90% 0%, #ffd8b2 0%, transparent 35%),
+    radial-gradient(circle at 10% 20%, #f4e6c6 0%, transparent 36%),
+    var(--bg);
+  font-family: "Avenir Next", "Trebuchet MS", "Segoe UI", sans-serif;
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+}
+
+.container {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  backdrop-filter: blur(8px);
+  background: rgba(245, 241, 232, 0.92);
+  border-bottom: 1px solid rgba(27, 31, 36, 0.1);
+}
+
+.nav-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.8rem 0;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.brand img {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+}
+
+.site-nav {
+  display: flex;
+  gap: 0.95rem;
+  align-items: center;
+}
+
+.site-nav a {
+  text-decoration: none;
+  color: var(--muted);
+  padding: 0.2rem 0.45rem;
+  border-radius: 5px;
+}
+
+.site-nav a:hover,
+.site-nav a.active {
+  color: var(--ink);
+  background: rgba(212, 79, 26, 0.16);
+}
+
+.menu-toggle {
+  display: none;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  padding: 0.35rem 0.75rem;
+  border-radius: 6px;
+}
+
+.hero {
+  padding: 4rem 0 3rem;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+  gap: 1.6rem;
+  align-items: start;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--brand-deep);
+  font-size: 0.82rem;
+  margin: 0 0 0.65rem;
+  font-weight: 700;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  line-height: 1.15;
+}
+
+h1 {
+  font-size: clamp(1.9rem, 5vw, 3.4rem);
+  max-width: 14ch;
+}
+
+h2 {
+  font-size: clamp(1.5rem, 3vw, 2.3rem);
+  margin-top: 0.15rem;
+}
+
+p {
+  margin: 0.8rem 0;
+}
+
+.hero-card,
+.card,
+.service-box,
+.form-panel,
+.status-banner {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+}
+
+.hero-card {
+  padding: 1.25rem;
+}
+
+ul {
+  margin: 0.5rem 0 0;
+  padding-left: 1.1rem;
+}
+
+.cta-row {
+  display: flex;
+  gap: 0.7rem;
+  margin-top: 1.1rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 999px;
+  padding: 0.62rem 1rem;
+  font-weight: 700;
+  border: 1px solid transparent;
+}
+
+.btn-primary {
+  background: var(--brand);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: #b53f12;
+}
+
+.btn-secondary {
+  border-color: var(--line);
+  background: var(--paper);
+}
+
+.btn-secondary:hover {
+  border-color: var(--brand);
+}
+
+.text-link {
+  display: inline-block;
+  margin-top: 0.8rem;
+  color: var(--brand-deep);
+  font-weight: 700;
+}
+
+.section {
+  padding: 2.3rem 0;
+}
+
+.section-alt {
+  background: rgba(255, 253, 247, 0.72);
+  border-block: 1px solid rgba(27, 31, 36, 0.08);
+}
+
+.section-title {
+  margin-bottom: 1rem;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.card {
+  padding: 1rem;
+}
+
+.price {
+  color: var(--brand-deep);
+  font-weight: 800;
+  margin-top: 1.1rem;
+}
+
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  align-items: center;
+}
+
+.service-box {
+  padding: 1rem;
+}
+
+.small-text {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.quote p:first-child {
+  font-style: italic;
+}
+
+.inner-hero {
+  padding: 3rem 0 1.2rem;
+}
+
+.stack {
+  display: grid;
+  gap: 1rem;
+}
+
+.service-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.service-table th,
+.service-table td {
+  text-align: left;
+  padding: 0.8rem;
+  border-bottom: 1px solid rgba(95, 104, 114, 0.2);
+}
+
+.service-table th {
+  background: rgba(212, 79, 26, 0.1);
+}
+
+form {
+  display: grid;
+  gap: 0.8rem;
+}
+
+label {
+  display: grid;
+  gap: 0.3rem;
+  font-weight: 600;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  border: 1px solid #b7b0a5;
+  border-radius: 8px;
+  padding: 0.62rem 0.72rem;
+  font: inherit;
+  background: #fff;
+}
+
+textarea {
+  min-height: 120px;
+}
+
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.8rem;
+}
+
+.form-panel {
+  padding: 1rem;
+}
+
+.status-banner {
+  padding: 0.75rem 1rem;
+  margin-top: 0.8rem;
+  border-left: 5px solid var(--brand);
+  display: none;
+}
+
+.status-banner.show {
+  display: block;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+}
+
+.filters button {
+  border: 1px solid var(--line);
+  background: var(--paper);
+  border-radius: 999px;
+  padding: 0.4rem 0.75rem;
+  cursor: pointer;
+}
+
+.filters button.active {
+  border-color: var(--brand);
+  background: rgba(212, 79, 26, 0.16);
+}
+
+.bike-meta {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.site-footer {
+  padding: 1.3rem 0;
+  border-top: 1px solid rgba(27, 31, 36, 0.15);
+  margin-top: 2rem;
+  background: rgba(255, 253, 247, 0.75);
+}
+
+.footer-wrap {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+@media (max-width: 900px) {
+  .hero-grid,
+  .split,
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-toggle {
+    display: inline-block;
+  }
+
+  .site-nav {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    background: var(--paper);
+    border-bottom: 1px solid var(--line);
+    padding: 0.75rem 1rem;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .site-nav.open {
+    display: flex;
+  }
+
+  .two-col {
+    grid-template-columns: 1fr;
+  }
+}

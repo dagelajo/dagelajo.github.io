@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Submit your mobile bike repair request in minutes."
+    />
+    <title>Request Repair | 18th Street Bike Shop</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="index.html">
+          <img src="18thStLogo.png" alt="18th Street Bike Shop logo" />
+          <span>18th Street Bike Shop</span>
+        </a>
+        <button class="menu-toggle" aria-label="Toggle navigation">Menu</button>
+        <nav class="site-nav" data-nav>
+          <a href="index.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="request-repair.html" class="active">Request Repair</a>
+          <a href="used-bikes.html">Used Bikes</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="inner-hero">
+        <div class="container">
+          <p class="eyebrow">Get Support</p>
+          <h1>Submit your bike repair request</h1>
+          <p>
+            Share your issue, bike type, and photos. We will follow up with a
+            quote and scheduling options.
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container split">
+          <article class="form-panel">
+            <h2>Repair Intake Form</h2>
+            <form id="repair-form">
+              <div class="two-col">
+                <label>
+                  Full Name
+                  <input name="name" type="text" required />
+                </label>
+                <label>
+                  Email
+                  <input name="email" type="email" required />
+                </label>
+              </div>
+
+              <div class="two-col">
+                <label>
+                  Phone
+                  <input name="phone" type="tel" />
+                </label>
+                <label>
+                  Zip Code
+                  <input name="zip" type="text" required />
+                </label>
+              </div>
+
+              <div class="two-col">
+                <label>
+                  Bike Type
+                  <select name="bikeType" required>
+                    <option value="">Select one</option>
+                    <option>Road</option>
+                    <option>Mountain</option>
+                    <option>Hybrid</option>
+                    <option>E-bike</option>
+                    <option>BMX</option>
+                    <option>Kids</option>
+                  </select>
+                </label>
+                <label>
+                  Service Urgency
+                  <select name="urgency">
+                    <option>Standard</option>
+                    <option>Same-day (if available)</option>
+                    <option>Emergency</option>
+                  </select>
+                </label>
+              </div>
+
+              <label>
+                Describe the issue
+                <textarea
+                  name="issue"
+                  placeholder="Example: Rear brake rubbing, shifting skips under load, possible flat."
+                  required
+                ></textarea>
+              </label>
+
+              <label>
+                Preferred appointment time
+                <input name="appointment" type="datetime-local" />
+              </label>
+
+              <label>
+                Photo upload (optional)
+                <input name="photos" type="file" multiple />
+              </label>
+
+              <button class="btn btn-primary" type="submit">Submit Request</button>
+            </form>
+            <div id="request-status" class="status-banner" role="status" aria-live="polite"></div>
+          </article>
+
+          <aside class="service-box">
+            <h3>What happens next</h3>
+            <ol>
+              <li>You submit your request and details.</li>
+              <li>We reply with quote + appointment options.</li>
+              <li>Service is completed on-site.</li>
+            </ol>
+            <p class="small-text">
+              This form is currently a visual prototype. The next step is wiring
+              submissions to email or a booking backend.
+            </p>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <p>18th Street Bike Shop</p>
+        <p>Mobile Repairs | Used Bikes | Rider Support</p>
+      </div>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>

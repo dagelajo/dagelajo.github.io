@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Browse serviced second-hand bikes from 18th Street Bike Shop."
+    />
+    <title>Used Bikes | 18th Street Bike Shop</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="index.html">
+          <img src="18thStLogo.png" alt="18th Street Bike Shop logo" />
+          <span>18th Street Bike Shop</span>
+        </a>
+        <button class="menu-toggle" aria-label="Toggle navigation">Menu</button>
+        <nav class="site-nav" data-nav>
+          <a href="index.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="request-repair.html">Request Repair</a>
+          <a href="used-bikes.html" class="active">Used Bikes</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="inner-hero">
+        <div class="container">
+          <p class="eyebrow">Second-Hand Bikes</p>
+          <h1>Serviced and ready to ride</h1>
+          <p>
+            Every bike here receives a basic tune and safety check before sale.
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="filters">
+            <button class="active" data-filter="all" type="button">All</button>
+            <button data-filter="road" type="button">Road</button>
+            <button data-filter="mountain" type="button">Mountain</button>
+            <button data-filter="hybrid" type="button">Hybrid</button>
+          </div>
+
+          <div class="card-grid">
+            <article class="card" data-bike-type="road">
+              <h3>Trek Domane AL 2</h3>
+              <p class="bike-meta">54 cm | Aluminum | Serviced Jan 2026</p>
+              <p>Great first road bike with new bar tape and fresh chain.</p>
+              <p class="price">$650</p>
+            </article>
+            <article class="card" data-bike-type="mountain">
+              <h3>Specialized Rockhopper</h3>
+              <p class="bike-meta">Medium | 29" wheels | Serviced Feb 2026</p>
+              <p>Trail-ready hardtail with tuned shifting and brake refresh.</p>
+              <p class="price">$780</p>
+            </article>
+            <article class="card" data-bike-type="hybrid">
+              <h3>Giant Escape 3</h3>
+              <p class="bike-meta">Small | City setup | Serviced Jan 2026</p>
+              <p>Comfort commuter with puncture-resistant tires.</p>
+              <p class="price">$420</p>
+            </article>
+          </div>
+
+          <article class="form-panel" style="margin-top: 1rem">
+            <h2>Reserve or trade-in inquiry</h2>
+            <p>
+              Want to hold a bike, ask about sizing, or discuss trade-in options?
+              Use the contact page and include the bike name.
+            </p>
+            <a class="btn btn-primary" href="contact.html">Contact Shop</a>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <p>18th Street Bike Shop</p>
+        <p>Mobile Repairs | Used Bikes | Rider Support</p>
+      </div>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
