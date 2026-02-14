@@ -36,19 +36,6 @@ if (requestForm) {
   });
 }
 
-const contactForm = document.querySelector("#contact-form");
-if (contactForm) {
-  contactForm.addEventListener("submit", (event) => {
-    event.preventDefault();
-    const status = document.querySelector("#contact-status");
-    if (status) {
-      status.textContent =
-        "Message sent. We will get back to you as soon as possible.";
-      status.classList.add("show");
-    }
-    contactForm.reset();
-  });
-}
 
 const filterButtons = document.querySelectorAll("[data-filter]");
 const bikeCards = document.querySelectorAll("[data-bike-type]");
