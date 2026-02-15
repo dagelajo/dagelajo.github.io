@@ -44,7 +44,25 @@
         <div class="container split">
           <article class="form-panel">
             <h2>Repair Intake Form</h2>
-            <form id="repair-form">
+            <form
+              id="repair-form"
+              action="https://formsubmit.co/18thstreetbikeshop@gmail.com"
+              method="POST"
+              enctype="multipart/form-data"
+            >
+              <input
+                type="hidden"
+                name="_subject"
+                value="New repair request from 18th Street Bike Shop website"
+              />
+              <input type="hidden" name="_captcha" value="false" />
+              <input
+                type="text"
+                name="_honey"
+                tabindex="-1"
+                autocomplete="off"
+                style="display: none"
+              />
               <div class="two-col">
                 <label>
                   Full Name
@@ -111,7 +129,6 @@
 
               <button class="btn btn-primary" type="submit">Submit Request</button>
             </form>
-            <div id="request-status" class="status-banner" role="status" aria-live="polite"></div>
           </article>
 
           <aside class="service-box">
@@ -121,10 +138,6 @@
               <li>We reply with quote + appointment options.</li>
               <li>Service is completed on-site.</li>
             </ol>
-            <p class="small-text">
-              This form is currently a visual prototype. The next step is wiring
-              submissions to email or a booking backend.
-            </p>
           </aside>
         </div>
       </section>

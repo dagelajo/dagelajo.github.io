@@ -7,36 +7,6 @@ if (toggle && nav) {
   });
 }
 
-const requestForm = document.querySelector("#repair-form");
-if (requestForm) {
-  requestForm.addEventListener("submit", (event) => {
-    event.preventDefault();
-
-    const formData = new FormData(requestForm);
-    const name = String(formData.get("name") || "").trim();
-    const issue = String(formData.get("issue") || "").trim();
-    const zip = String(formData.get("zip") || "").trim();
-    const status = document.querySelector("#request-status");
-
-    if (!name || !issue || !zip) {
-      if (status) {
-        status.textContent = "Please fill in name, zip code, and issue details.";
-        status.classList.add("show");
-      }
-      return;
-    }
-
-    if (status) {
-      status.textContent =
-        "Request received. You should get a confirmation response shortly.";
-      status.classList.add("show");
-    }
-
-    requestForm.reset();
-  });
-}
-
-
 const filterButtons = document.querySelectorAll("[data-filter]");
 const bikeCards = document.querySelectorAll("[data-bike-type]");
 
