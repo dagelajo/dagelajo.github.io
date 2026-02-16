@@ -29,3 +29,21 @@ if (filterButtons.length > 0 && bikeCards.length > 0) {
     });
   });
 }
+
+const formsWithRequiredFields = document.querySelectorAll("form");
+
+formsWithRequiredFields.forEach((form) => {
+  form.addEventListener("submit", (event) => {
+    if (!form.checkValidity()) {
+      event.preventDefault();
+      form.classList.add("show-invalid");
+      form.reportValidity();
+    }
+  });
+
+  form.addEventListener("input", () => {
+    if (form.classList.contains("show-invalid")) {
+      form.checkValidity();
+    }
+  });
+});

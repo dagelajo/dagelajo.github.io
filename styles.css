@@ -299,6 +299,12 @@ select {
   background: #fff;
 }
 
+form.show-invalid :is(input, textarea, select):required:invalid {
+  border-color: #c52e2e;
+  outline: 2px solid #c52e2e;
+  outline-offset: 1px;
+}
+
 textarea {
   min-height: 120px;
 }
