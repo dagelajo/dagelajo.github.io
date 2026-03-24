@@ -24,6 +24,10 @@ body {
   line-height: 1.5;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -353,6 +357,64 @@ textarea {
 .bike-meta {
   color: var(--muted);
   font-size: 0.95rem;
+}
+
+.bike-card-trigger {
+  cursor: pointer;
+  transition: transform 0.16s ease, box-shadow 0.16s ease;
+}
+
+.bike-card-trigger:hover,
+.bike-card-trigger:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 30px rgba(37, 27, 17, 0.2);
+}
+
+.bike-modal[hidden] {
+  display: none;
+}
+
+.bike-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+}
+
+.bike-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(27, 31, 36, 0.55);
+}
+
+.bike-modal__panel {
+  position: relative;
+  z-index: 1;
+  width: min(680px, 100%);
+  max-height: 90vh;
+  overflow: auto;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  padding: 1rem;
+}
+
+.bike-modal__close {
+  border: 1px solid var(--line);
+  background: var(--paper);
+  border-radius: 999px;
+  padding: 0.4rem 0.75rem;
+  font: inherit;
+  cursor: pointer;
+  float: right;
+}
+
+.bike-modal__panel img {
+  border-radius: 10px;
+  border: 1px solid var(--line);
 }
 
 .site-footer {

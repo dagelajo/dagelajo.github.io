@@ -49,7 +49,15 @@
           </div>
 
           <div class="card-grid">
-            <article class="card" data-bike-type="road">
+            <article
+              class="card bike-card-trigger"
+              data-bike-type="road"
+              data-modal-open="scattante-modal"
+              role="button"
+              tabindex="0"
+              aria-haspopup="dialog"
+              aria-controls="scattante-modal"
+            >
               <img
                 src="scattante-r-five-sixty-57cm.png"
                 alt="Scattante 2008 R Five Sixty road bike in 57 cm frame size"
@@ -61,6 +69,7 @@
                 current condition details and availability.
               </p>
               <p class="price">$350</p>
+              <p class="small-text">Click for more details and photos</p>
             </article>
           </div>
 
@@ -75,6 +84,33 @@
         </div>
       </section>
     </main>
+
+    <div
+      id="scattante-modal"
+      class="bike-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="scattante-modal-title"
+      hidden
+    >
+      <div class="bike-modal__backdrop" data-modal-close></div>
+      <div class="bike-modal__panel">
+        <button class="bike-modal__close" type="button" aria-label="Close details" data-modal-close>
+          Close
+        </button>
+        <h2 id="scattante-modal-title">Scattante 2008 R Five Sixty</h2>
+        <p class="bike-meta">Road Bike | 57 cm frame | Asking $350</p>
+        <img
+          src="scattante-r-five-sixty-57cm.png"
+          alt="Scattante 2008 R Five Sixty road bike"
+        />
+        <p>
+          This modal is ready for additional listing content. You can add more
+          bike photos and deeper details here (components, mileage, recent
+          service, and condition notes).
+        </p>
+      </div>
+    </div>
 
     <footer class="site-footer">
       <div class="container footer-wrap">
